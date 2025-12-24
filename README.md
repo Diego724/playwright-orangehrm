@@ -49,7 +49,7 @@ playwright-orangehrm/
 ├─ package.json
 └─ README.md
 ```
-## 📁 Estructura del proyecto
+
 1️⃣ Clonar el repositorio
 ```bash
 git clone https://github.com/tu-usuario/playwright-orangehrm.git
