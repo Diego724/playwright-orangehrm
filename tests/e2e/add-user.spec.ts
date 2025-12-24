@@ -17,11 +17,17 @@ test("Agregar usuario y guardar exitosamente", async ({ page }) => {
   // Generar un username único usando timestamp
   const timestamp = Date.now();
   const username = `testuser${timestamp}`;
-  const password = "Test123!@#";
-  const employeeName = "Odis Adalwin"; // Empleado por defecto en la demo
+  const password = "SecurePass2024!@#"; // Contraseña fuerte con mayúsculas, minúsculas, números y caracteres especiales
+  const userRole = "ESS"; // Employee Self Service
 
-  // Agregar usuario
-  await addUserPage.addUser(employeeName, username, password, "Enabled");
+  // Agregar usuario (el método seleccionará automáticamente el primer empleado disponible)
+  await addUserPage.addUser(
+    undefined, // No especificar empleado, se seleccionará el primero disponible
+    username,
+    password,
+    userRole,
+    "Enabled"
+  );
 
   // Verificar que el usuario se guardó exitosamente
   const successMessage = await addUserPage.verifySuccessMessage();
@@ -30,4 +36,3 @@ test("Agregar usuario y guardar exitosamente", async ({ page }) => {
   // Verificar que estamos de vuelta en la lista de usuarios
   await expect(page).toHaveURL(/viewSystemUsers/);
 });
-
