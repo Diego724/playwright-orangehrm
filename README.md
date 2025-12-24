@@ -18,7 +18,6 @@ Validar flujos críticos de una aplicación web simulando el comportamiento de u
   - Usuario: `Admin`
   - Password: `admin123`
 
----
 
 ## 🧪 Alcance de las pruebas
 
@@ -49,17 +48,22 @@ playwright-orangehrm/
 ├─ playwright.config.ts
 ├─ package.json
 └─ README.md
----
-▶️ Instalación y ejecución
+```
+## 📁 Estructura del proyecto
 1️⃣ Clonar el repositorio
+```bash
 git clone https://github.com/tu-usuario/playwright-orangehrm.git
 cd playwright-orangehrm
-
+```
 2️⃣ Instalar dependencias
+```bash
 npm install
-
+```
 3️⃣ Ejecutar las pruebas
+```bash
 npx playwright test
-
+```
 4️⃣ Ver reporte HTML
+```bash
 npx playwright show-report
+```
