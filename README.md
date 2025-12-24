@@ -49,7 +49,7 @@ playwright-orangehrm/
 ├─ playwright.config.ts
 ├─ package.json
 └─ README.md
-
+---
 ▶️ Instalación y ejecución
 1️⃣ Clonar el repositorio
 git clone https://github.com/tu-usuario/playwright-orangehrm.git
